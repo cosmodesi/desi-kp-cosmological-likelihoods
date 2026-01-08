@@ -1,0 +1,23 @@
+**/dust
+doc/_build/
+**/__pycache__
+**/pytest_cache
+**/*.egg
+**/*.egg-info
+**/.astropy
+**/.cache
+**/.config
+**/.wget*
+**/_tests
+**/_runs
+**/_tmp
+**/dist
+**/eggs
+**/build
+**/.ipynb_checkpoints
+**/*.png
+**/bak
+**/_plots/*
+
+# Unit test / coverage reports
+**/.coverage

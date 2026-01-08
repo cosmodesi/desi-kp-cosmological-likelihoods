@@ -1,0 +1,232 @@
+stop_at_error: true
+speed: 40
+solve: 'marg'
+params:
+  Lya_z0.loglikelihood:
+    latex: L_{\mathrm{Lya\_z0}}
+    derived: true
+  pre_QSO_z0.b1p:
+    latex: b_{1, \mathrm{pre}, \mathrm{QSO}, 0}
+    prior:
+      dist: uniform
+      min: 0.0
+      max: 3.0
+    ref:
+      dist: norm
+      loc: 0.8450892519032956
+      scale: 0.1
+    proposal: 0.1
+  pre_QSO_z0.b2p:
+    latex: b_{2, \mathrm{pre}, \mathrm{QSO}, 0}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_QSO_z0.bsp:
+    latex: b_{s, \mathrm{pre}, \mathrm{QSO}, 0}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_QSO_z0.b3p: 0.0
+  QSO_z0.loglikelihood:
+    latex: L_{\mathrm{QSO\_z0}}
+    derived: true
+  pre_ELG_z1.b1p:
+    latex: b_{1, \mathrm{pre}, \mathrm{ELG}, 1}
+    prior:
+      dist: uniform
+      min: 0.0
+      max: 3.0
+    ref:
+      dist: norm
+      loc: 0.5160927533922075
+      scale: 0.1
+    proposal: 0.1
+  pre_ELG_z1.b2p:
+    latex: b_{2, \mathrm{pre}, \mathrm{ELG}, 1}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_ELG_z1.bsp:
+    latex: b_{s, \mathrm{pre}, \mathrm{ELG}, 1}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_ELG_z1.b3p: 0.0
+  ELG_z1.loglikelihood:
+    latex: L_{\mathrm{ELG\_z1}}
+    derived: true
+  pre_LRG_z2.b1p:
+    latex: b_{1, \mathrm{pre}, \mathrm{LRG}, 2}
+    prior:
+      dist: uniform
+      min: 0.0
+      max: 3.0
+    ref:
+      dist: norm
+      loc: 1.0172387543690267
+      scale: 0.1
+    proposal: 0.1
+  pre_LRG_z2.b2p:
+    latex: b_{2, \mathrm{pre}, \mathrm{LRG}, 2}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_LRG_z2.bsp:
+    latex: b_{s, \mathrm{pre}, \mathrm{LRG}, 2}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_LRG_z2.b3p: 0.0
+  LRG_z2.loglikelihood:
+    latex: L_{\mathrm{LRG\_z2}}
+    derived: true
+  pre_LRG_z1.b1p:
+    latex: b_{1, \mathrm{pre}, \mathrm{LRG}, 1}
+    prior:
+      dist: uniform
+      min: 0.0
+      max: 3.0
+    ref:
+      dist: norm
+      loc: 1.122807096648711
+      scale: 0.1
+    proposal: 0.1
+  pre_LRG_z1.b2p:
+    latex: b_{2, \mathrm{pre}, \mathrm{LRG}, 1}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_LRG_z1.bsp:
+    latex: b_{s, \mathrm{pre}, \mathrm{LRG}, 1}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_LRG_z1.b3p: 0.0
+  LRG_z1.loglikelihood:
+    latex: L_{\mathrm{LRG\_z1}}
+    derived: true
+  pre_LRG_z0.b1p:
+    latex: b_{1, \mathrm{pre}, \mathrm{LRG}, 0}
+    prior:
+      dist: uniform
+      min: 0.0
+      max: 3.0
+    ref:
+      dist: norm
+      loc: 1.2366643662793164
+      scale: 0.1
+    proposal: 0.1
+  pre_LRG_z0.b2p:
+    latex: b_{2, \mathrm{pre}, \mathrm{LRG}, 0}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_LRG_z0.bsp:
+    latex: b_{s, \mathrm{pre}, \mathrm{LRG}, 0}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_LRG_z0.b3p: 0.0
+  LRG_z0.loglikelihood:
+    latex: L_{\mathrm{LRG\_z0}}
+    derived: true
+  pre_BGS_z0.b1p:
+    latex: b_{1, \mathrm{pre}, \mathrm{BGS}, 0}
+    prior:
+      dist: uniform
+      min: 0.0
+      max: 3.0
+    ref:
+      dist: norm
+      loc: 1.0359877473503687
+      scale: 0.1
+    proposal: 0.1
+  pre_BGS_z0.b2p:
+    latex: b_{2, \mathrm{pre}, \mathrm{BGS}, 0}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_BGS_z0.bsp:
+    latex: b_{s, \mathrm{pre}, \mathrm{BGS}, 0}
+    prior:
+      dist: norm
+      loc: 0.0
+      scale: 5.0
+    ref:
+      dist: norm
+      loc: 0.0
+      scale: 1.0
+    proposal: 1.0
+  pre_BGS_z0.b3p: 0.0
+  BGS_z0.loglikelihood:
+    latex: L_{\mathrm{BGS\_z0}}
+    derived: true
+observable_name: spectrum-poles-rotated+bao-recon
+tracers: [bgs_z0, lrg_z0, lrg_z1, lrg_z2, elg_z1, qso_z0, lya_z0]
+data_dir: .

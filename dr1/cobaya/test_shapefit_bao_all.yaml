@@ -1,0 +1,31 @@
+theory:
+  camb:
+    extra_args:
+      bbn_predictor: PArthENoPE_880.2_standard.dat
+      dark_energy_model: ppf
+      num_massive_neutrinos: 1
+    speed: 2
+likelihood:
+  desi_shapefit_bao_all:
+params:
+  omch2: 
+    latex: \Omega_\mathrm{c} h^2
+    value: 'lambda omegam, ombh2, H0: omegam*(H0/100)**2 - ombh2'
+  H0: 68.5
+  omegam: 0.304158
+  ombh2: 0.0189629
+  logA: 3.
+  As:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: A_\mathrm{s}
+  mnu: 0.06
+
+sampler:
+  evaluate:
+    N: 1
+  # measure_speeds: True
+    # drag: True
+
+output: _chains_test_fs_bao/chain
+
+stop_at_error: True 

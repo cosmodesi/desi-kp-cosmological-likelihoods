@@ -1,0 +1,27 @@
+stop_at_error: true
+speed: 1
+params:
+  Lya_z0.loglikelihood:
+    latex: L_{\mathrm{Lya\_z0}}
+    derived: true
+  QSO_z0.loglikelihood:
+    latex: L_{\mathrm{QSO\_z0}}
+    derived: true
+  ELG_z1.loglikelihood:
+    latex: L_{\mathrm{ELG\_z1}}
+    derived: true
+  LRG_z2.loglikelihood:
+    latex: L_{\mathrm{LRG\_z2}}
+    derived: true
+  LRG_z1.loglikelihood:
+    latex: L_{\mathrm{LRG\_z1}}
+    derived: true
+  LRG_z0.loglikelihood:
+    latex: L_{\mathrm{LRG\_z0}}
+    derived: true
+  BGS_z0.loglikelihood:
+    latex: L_{\mathrm{BGS\_z0}}
+    derived: true
+observable_name: spectrum-poles-rotated+bao-recon
+tracers: [bgs_z0, lrg_z0, lrg_z1, lrg_z2, elg_z1, qso_z0, lya_z0]
+data_dir: .

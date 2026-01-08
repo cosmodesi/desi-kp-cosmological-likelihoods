@@ -1,0 +1,50 @@
+theory:
+  camb:
+    extra_args:
+      bbn_predictor: PArthENoPE_880.2_standard.dat
+      dark_energy_model: ppf
+      num_massive_neutrinos: 1
+    speed: 2
+  fs_bao_likelihoods.reptvelocileptors:
+likelihood:
+  desi_fs_bao_all:
+params:
+  omch2: 
+    latex: \Omega_\mathrm{c} h^2
+    value: 'lambda omegam, ombh2, H0: omegam*(H0/100)**2 - ombh2'
+  H0: 68.5
+  omegam: 0.304158
+  ombh2: 0.0189629
+  logA: 3.
+  As:
+    value: 'lambda logA: 1e-10*np.exp(logA)'
+    latex: A_\mathrm{s}
+  mnu: 0.06
+  pre_QSO_z0.b1p: 0.780983
+  pre_QSO_z0.b2p: 0.353843
+  pre_QSO_z0.bsp: 0.135725
+  pre_ELG_z1.b1p: 0.127936
+  pre_ELG_z1.b2p: -0.578801
+  pre_ELG_z1.bsp: -1.45356
+  pre_LRG_z2.b1p: 1.04564
+  pre_LRG_z2.b2p: -0.493139
+  pre_LRG_z2.bsp: -0.24021
+  pre_LRG_z1.b1p: 1.22446
+  pre_LRG_z1.b2p: -0.671727
+  pre_LRG_z1.bsp: -0.22624
+  pre_LRG_z0.b1p: 1.1351
+  pre_LRG_z0.b2p: -0.139101
+  pre_LRG_z0.bsp: -0.910397
+  pre_BGS_z0.b1p: 1.11348
+  pre_BGS_z0.b2p: 0.660148
+  pre_BGS_z0.bsp: -0.223088
+
+sampler:
+  evaluate:
+    N: 1
+  # measure_speeds: True
+    # drag: True
+
+output: _chains_test_fs_bao/chain
+
+stop_at_error: True 
