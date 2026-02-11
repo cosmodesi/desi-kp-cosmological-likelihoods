@@ -10,6 +10,7 @@ list_zrange = [('BGS_BRIGHT-21.5', 0, (0.1, 0.4)), ('LRG', 0, (0.4, 0.6)), ('LRG
 
 
 def dataset_fn(data_dir, tracer, zrange, observable_name='spectrum-poles+bao-recon'):
+    data_dir = Path(data_dir)
     if observable_name == 'bao-recon':
         if 'lya' in tracer.lower():
             return data_dir / f'likelihood_bao_syst_{tracer}_GCcomb_z{zrange[0]:.1f}-{zrange[1]:.1f}.h5'
@@ -79,6 +80,7 @@ class desi_shapefit_bao_all(Likelihood):
                 self._quantities.append((z, list(bao.parameters)))
             self.flatdata.append(np.concatenate(flatdata))
             covariance = likelihood_data.covariance.value()
+            #assert np.allclose(covariance.T, covariance)
             precision = np.linalg.inv(covariance)
             self.precision.append(precision)
         self.z = list(self._requirements['Pk_grid']['z'])
