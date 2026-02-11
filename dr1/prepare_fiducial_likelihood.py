@@ -4,8 +4,8 @@ import numpy as np
 import lsstypes as types
 
 # CHANGE Path here
-#dr_base_dir = Path('/global/cfs/cdirs/desi/users/adematti/dr1_release/dr1-fs-bao-clustering-measurements')
-dr_base_dir = Path('.')
+dr_base_dir = Path('/global/cfs/cdirs/desi/users/adematti/dr1_release/dr1-fs-bao-clustering-measurements')
+#dr_base_dir = Path('.')
 
 
 def get_observable(tracer, zrange, dataset='spectrum-poles-rotated', check=False):
@@ -182,7 +182,7 @@ def get_covariance_matrix(tracer, zrange, dataset='spectrum-poles-rotated', chec
         mtracer = {'BGS_BRIGHT-21.5': 'BGS', 'ELG_LOPnotqso': 'ELG_LOP'}.get(tracer, tracer)
         observables = [types.read(dr_base_dir / f'EZmock/ffa/spectrum/spectrum-poles_{mtracer}_GCcomb_z{zrange[0]:.1f}-{zrange[1]:.1f}_thetacut0.05_{imock:d}.h5') for imock in imocks]
         if dataset == 'spectrum-poles-rotated+bao-recon':
-            observables_bao = [types.read(dr_base_dir / f'EZmock/ffa/recsym/bao/bao-recsym_{tracer}_GCcomb_z{zrange[0]:.1f}-{zrange[1]:.1f}_{imock:d}.h5') for imock in imocks]
+            observables_bao = [types.read(dr_base_dir / f'EZmock/ffa/recsym/bao/bao-recsym_{mtracer}_GCcomb_z{zrange[0]:.1f}-{zrange[1]:.1f}_{imock:d}.h5') for imock in imocks]
             observables = [types.ObservableTree([spectrum, bao], observables=['spectrum', 'baorecon']) for spectrum, bao in zip(observables, observables_bao)]
         covariance_mock = types.cov(observables).at.observable.match(covariance_raw.observable)
         assert np.allclose(covariance_mock.value(), covariance_raw.value())
@@ -298,7 +298,7 @@ if __name__ == '__main__':
     check = True
     for tracer, zrange in list_zrange:
         for dataset in ['spectrum-poles-rotated', 'spectrum-poles-rotated+bao-recon']:
-            print(tracer, zrange)
+            print(tracer, zrange, dataset)
             observable = get_observable(tracer, zrange, dataset=dataset, check=check)
             window = get_window_matrix(tracer, zrange, dataset=dataset, check=check)
             covariance = get_covariance_matrix(tracer, zrange, dataset=dataset, check=check)
