@@ -7,8 +7,9 @@ theory:
     speed: 2
 likelihood:
   desi_shapefit_bao_all:
+    data_dir: ./data/likelihood
 params:
-  omch2: 
+  omch2:
     latex: \Omega_\mathrm{c} h^2
     value: 'lambda omegam, ombh2, H0: omegam*(H0/100)**2 - ombh2'
   H0: 68.5
@@ -28,4 +29,4 @@ sampler:
 
 output: _chains_test_fs_bao/chain
 
-stop_at_error: True 
+stop_at_error: True

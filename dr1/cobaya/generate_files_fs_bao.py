@@ -22,9 +22,9 @@ if __name__ == '__main__':
 
     import argparse
     parser = argparse.ArgumentParser(description='Y1 FS cosmological likelihoods')
-    parser.add_argument('--clean', action='store_true', default=False)
+    parser.add_argument('--clean', action='store_true', default=False, help='remove generated likelihoods')
     args = parser.parse_args()
-    
+
     config = load('desi_fs_bao_all.yaml')
     tracers = {'all': ['BGS_z0', 'LRG_z0', 'LRG_z1', 'LRG_z2', 'ELG_z1', 'QSO_z0', 'Lya_z0'], 'all_nolya': ['BGS_z0', 'LRG_z0', 'LRG_z1', 'LRG_z2', 'ELG_z1', 'QSO_z0'], 'bgs': ['BGS_z0'], 'lrg': ['LRG_z0', 'LRG_z1', 'LRG_z2'], 'lrg_z0': ['LRG_z0'], 'lrg_z1': ['LRG_z1'], 'lrg_z2': ['LRG_z2'], 'elg': ['ELG_z1'], 'qso': ['QSO_z0'], 'lya': ['Lya_z0']}
     for tracer, namespaces in tracers.items():
@@ -51,5 +51,3 @@ class {name}(desi_fs_bao_all):
             '''
             with open(basename + '.py', 'w') as file:
                 file.write(py_template.format(name=basename, tracer=tracer))
-            
-            

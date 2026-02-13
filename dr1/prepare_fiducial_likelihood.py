@@ -3,8 +3,8 @@ import numpy as np
 
 import lsstypes as types
 
-# CHANGE Path here
-dr_base_dir = Path('/global/cfs/cdirs/desi/users/adematti/dr1_release/dr1-fs-bao-clustering-measurements')
+# CHANGE DATA PATH HERE
+dr_base_dir = Path('/path/to/your/local/copy')
 #dr_base_dir = Path('.')
 
 
@@ -289,6 +289,7 @@ def get_covariance_matrix(tracer, zrange, dataset='spectrum-poles-rotated', chec
 
 
 if __name__ == '__main__':
+
     list_zrange = [('BGS_BRIGHT-21.5', (0.1, 0.4)),
                     ('LRG', (0.4, 0.6)),
                     ('LRG', (0.6, 0.8)),
@@ -312,4 +313,3 @@ if __name__ == '__main__':
                 assert np.allclose(likelihood.observable.value(), likelihood_ref.observable.value())
                 assert np.allclose(likelihood.window.value(), likelihood_ref.window.value())
                 assert np.allclose(likelihood.covariance.value(), likelihood_ref.covariance.value())
-                
