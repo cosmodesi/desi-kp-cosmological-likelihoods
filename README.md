@@ -1,4 +1,4 @@
-# 🚀 desi-kp-cosmological likelihoods
+# <img src="assets/logo-64x64.png" width="40"> DESI KP cosmological likelihoods
 
 This repository contains official cosmological likelihoods of DESI Key Projects. Thus far:
 

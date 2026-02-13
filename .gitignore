@@ -9,14 +9,10 @@ doc/_build/
 **/.config
 **/.wget*
 **/_tests
-**/_runs
-**/_tmp
 **/dist
 **/eggs
 **/build
 **/.ipynb_checkpoints
-**/*.png
-**/bak
 **/_plots/*
 
 # Unit test / coverage reports
